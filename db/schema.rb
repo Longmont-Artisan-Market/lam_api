@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_041143) do
+ActiveRecord::Schema.define(version: 2021_01_26_034224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "applications", force: :cascade do |t|
+    t.string "website"
+    t.integer "category"
+    t.boolean "mlm_status"
+    t.string "online_orders"
+    t.boolean "previous_vendor"
+    t.boolean "mask_maker"
+    t.string "facebook_link"
+    t.string "instagram_link"
+    t.string "image_one"
+    t.string "image_two"
+    t.string "previous_efforts"
+    t.string "additional_info"
+    t.string "description"
+    t.boolean "first_event"
+    t.string "price_range"
+    t.integer "booth_choice"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_applications_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -25,4 +54,5 @@ ActiveRecord::Schema.define(version: 2021_01_13_041143) do
     t.integer "role", default: 0
   end
 
+  add_foreign_key "applications", "users"
 end

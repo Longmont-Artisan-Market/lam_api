@@ -261,13 +261,27 @@
           null
         ]
       },
-      "/Users/kristastadler/longmont_artisan_market/lam_api/app/models/user.rb": {
+      "/Users/kristastadler/longmont_artisan_market/lam_api/app/models/application.rb": {
         "lines": [
           1,
           1,
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
           1,
           null
         ]
@@ -278,8 +292,53 @@
           1,
           null
         ]
+      },
+      "/Users/kristastadler/longmont_artisan_market/lam_api/spec/models/event_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/longmont_artisan_market/lam_api/app/models/event.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/kristastadler/longmont_artisan_market/lam_api/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/longmont_artisan_market/lam_api/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1610511589
+    "timestamp": 1611632658
   }
 }

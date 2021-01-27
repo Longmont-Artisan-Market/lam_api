@@ -9,4 +9,9 @@ RSpec.describe User, type: :model do
 
     it {should validate_uniqueness_of(:email_address)}
   end
+
+  describe "relationships" do 
+    it { should have_many :event_users}
+    it { should have_many :applications}
+  end
 end

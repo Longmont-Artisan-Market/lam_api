@@ -304,12 +304,14 @@
           null,
           1,
           2,
+          2,
           null,
           null
         ]
       },
       "/Users/kristastadler/longmont_artisan_market/lam_api/app/models/event.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -333,6 +335,7 @@
           1,
           2,
           2,
+          2,
           null,
           null
         ]
@@ -345,12 +348,21 @@
           1,
           1,
           1,
+          1,
           null,
+          1,
+          null
+        ]
+      },
+      "/Users/kristastadler/longmont_artisan_market/lam_api/app/models/event_user.rb": {
+        "lines": [
+          1,
+          1,
           1,
           null
         ]
       }
     },
-    "timestamp": 1611720554
+    "timestamp": 1611720852
   }
 }

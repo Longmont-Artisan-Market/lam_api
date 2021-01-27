@@ -7,5 +7,6 @@ RSpec.describe Event, type: :model do
 
   describe "relationships" do
     it { should have_many :event_users}
-  end 
+    it {should have_many(:users).through(:event_users)}
+  end
 end

@@ -1,22 +1,22 @@
 <h1 align= "center">Register as a New User</h1>
-<center>
+<div style="text-align: center;">
   <%= form_tag '/users', method: :post do |f| %>
 
     <%= label_tag :name %>
-    <%= text_field_tag :name %>
+    <%= text_field_tag :name %><br>
 
     <%= label_tag :business_name %>
-    <%= text_field_tag :business_name %>
+    <%= text_field_tag :business_name %><br>
 
     <%= label_tag :email_address %>
-    <%= text_field_tag :email_address %>
+    <%= text_field_tag :email_address %><br>
 
     <%= label_tag :password %>
-    <%= text_field_tag :password %>
+    <%= text_field_tag :password %><br>
 
     <%= label_tag :password_confirmation %>
-    <%= text_field_tag :password_confirmation %>
+    <%= text_field_tag :password_confirmation %><br>
 
     <%= submit_tag 'Complete Registration' %>
   <% end %>
-</center>
+</div>

@@ -18,4 +18,5 @@ class Application < ApplicationRecord
                   }
   enum booth_choice: {six_ft_table: 0, ten_by_ten: 1}
   belongs_to :user
+  belongs_to :event
 end

@@ -1,0 +1,10 @@
+<div style="text-align: center;">
+<h1><%= @event.name %></h1>
+
+<h2> Put in some copy here with a description of the event! </h2>
+
+<h2>Applications accepted from <%= @event.application_open_date.strftime("%m-%d-%Y") %> until <%= @event.application_close_date.strftime("%m-%d-%Y") %></h2>
+
+<h2><%=link_to "Apply for this Event!", "/applications/#{@event.id}/#{@user.id}" %></h2>
+
+</div>

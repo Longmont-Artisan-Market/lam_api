@@ -590,12 +590,15 @@
         "lines": [
           1,
           1,
+          null,
+          1,
           1,
           1,
           1,
           null,
           1,
           1,
+          null,
           null,
           null
         ]
@@ -604,7 +607,7 @@
         "lines": [
           1,
           1,
-          0,
+          2,
           null,
           null
         ]
@@ -706,6 +709,36 @@
           null
         ]
       },
+      "/Users/kristastadler/Desktop/lam_api/app/admin/events.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/app/models/event.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          1,
+          null,
+          null,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/kristastadler/Desktop/lam_api/app/admin/users.rb": {
         "lines": [
           1,
@@ -742,8 +775,51 @@
           null
         ]
       },
-      "/Users/kristastadler/Desktop/lam_api/app/models/event.rb": {
+      "/Users/kristastadler/Desktop/lam_api/spec/features/profile_show_spec.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/spec/features/user_register_and_login_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
           1,
           1,
           1,
@@ -752,12 +828,102 @@
           null,
           1,
           1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/spec/models/application_spec.rb": {
+        "lines": [
+          1,
+          null,
           1,
           1,
           2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/spec/models/event_spec.rb": {
+        "lines": [
           1,
           null,
+          1,
+          1,
+          2,
           null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/app/controllers/events_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
           1,
           null,
           null
@@ -767,7 +933,7 @@
         "lines": [
           1,
           1,
-          1,
+          2,
           null,
           null
         ]
@@ -779,12 +945,63 @@
           null,
           1,
           1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/app/controllers/homepage_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           null,
           null
         ]
+      },
+      "/Users/kristastadler/Desktop/lam_api/app/models/event_user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1621548602
+    "timestamp": 1621562501
   }
 }

@@ -89,7 +89,21 @@
     <% label_tag :ten_by_ten %>
     <%=radio_button_tag :booth_choice, 1 %><br>
 
+   Have you been a vendor at a previous Longmont Artisan Market Event?<br>
+    <%=label_tag :yes %>
+    <%=radio_button_tag :previous_vendor, true %>
+    <%=label_tag :no %>
+    <%=radio_button_tag :previous_vendor, false %><br>
 
+    The success of our events depends on vendors helping with our marketing endeavors.
+    How have you helped Longmont Artisan Market spread the word about events you have been a part of? <br>
+
+    Examples could include posting on Instagram, sharing our event on Facebook, or handing out flyers, among other things.<br>
+
+    If relevant, include links to posts or feel free to email us screenshots at longmontartisanmarket@gmail.com<br>
+
+    <%label_tag :previous_efforts %>
+    <%= text_area_tag :previous_efforts %>
 
 
 

@@ -1,0 +1,101 @@
+<h1 align= "center">Apply for the <%=@event.name %></h1>
+
+<div style="text-align: center;">
+<h2> Personal Information </h2>
+<p>Name: <%= @user.name %></p>
+<p> Business Name: <%= @user.business_name %></p>
+<p> E-Mail Address: <%= @user.email_address %></p>
+</div>
+
+<div style="text-align: center;">
+  <h2>Application</h2>
+  <%= form_tag '/applications', method: :post do |f| %>
+
+    Website:<br>
+    <% label_tag :website %>
+    <%= text_field_tag :website %><br>
+
+    <%= label_tag :facebook_link %><br>
+    <%= text_field_tag :facebook_link %><br>
+
+    <%= label_tag :instagram_link %><br>
+    <%= text_field_tag :instagram_link %><br>
+
+    What do you make?<br>
+
+    <%label_tag :short_description%>
+    <%= text_area_tag :short_description %><br>
+
+    How would you categorize it?<br>
+
+    <%=label_tag :jewelry %>
+    <%=radio_button_tag :category, 0 %>
+    <%=label_tag :fiber_arts %>
+    <%=radio_button_tag :category, 1 %>
+    <%=label_tag :fine_art %>
+    <%=radio_button_tag :category, 2 %>
+    <%=label_tag :ceramics %>
+    <%=radio_button_tag :category, 3 %>
+    <%=label_tag :products_for_children %>
+    <%=radio_button_tag :category, 4 %>
+    <%=label_tag :household_products %>
+    <%=radio_button_tag :category, 5 %>
+    <%=label_tag :skincare %>
+    <%=radio_button_tag :category, 6 %>
+    <%=label_tag :woodworking %>
+    <%=radio_button_tag :category, 7 %>
+    <%=label_tag :paper_goods %>
+    <%=radio_button_tag :category, 8 %><br>
+
+    Longmont Artisan Market is dedicated to supporting local artists and makers.
+    The Handcrafted Holiday Market only features vendors who create handcrafted goods within Colorado.<br>
+    We specifically do not accept any MLM vendors (Lularoe, doTerra, Pampered Chef, etc.)<br>
+
+    I understand this policy and confirm that, as a vendor, my goods are all handcrafted and made in Colorado.
+
+    <% label_tag :mlm_status %>
+    <%= check_box_tag 'accept' %><br>
+
+    Tell us a bit more about yourself and what you make!<br>
+
+    For example: What is your process?
+    What materials do you use? What makes your work unique?<br>
+
+    <% label_tag :description %>
+    <%= text_area_tag :description %><br>
+
+    Is this your first time as a vendor at a market event?<br>
+    <%=label_tag :yes %>
+    <%=radio_button_tag :first_event, true %>
+    <%=label_tag :no %>
+    <%=radio_button_tag :first_event, false %><br>
+
+    Most people who visit our event are shopping for holiday gifts --
+    what would you consider your most "giftable" product? Why?
+
+    <% label_tag :best_gift %>
+    <%= text_field_tag :best_gift %><br>
+
+    <%= label_tag :price_range_of_products %><br>
+    <%= text_field_tag :price_range %><br>
+
+    Booth Choice:<br>
+
+    Six Foot Table
+    <% label_tag :six_foot %>
+    <%=radio_button_tag :booth_choice, 0 %>
+
+    10x10 Booth
+    <% label_tag :ten_by_ten %>
+    <%=radio_button_tag :booth_choice, 1 %><br>
+
+
+
+
+
+
+
+
+    <%= submit_tag 'Submit Application' %>
+  <% end %>
+</div>

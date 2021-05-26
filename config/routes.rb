@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   get "/", to: "homepage#index"
   get "/register", to: "users#new"
   post "/users", to: "users#create"
-  get "/applications/:event_id/:user_id", to: "applications#new"
+
+  namespace :applications do
+    get "/:event_id/:user_id", to: "applications#new"
+  end
 
   namespace :events do
     get "/:event_id", to: "events#show"

@@ -7,109 +7,124 @@
 <p> E-Mail Address: <%= @user.email_address %></p>
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center; padding-bottom: 100px">
   <h2>Application</h2>
-  <%= form_tag '/applications', method: :post do |f| %>
+  <%= form_tag"/applications/#{@event.id}/#{@user.id}", method: :post do |f| %>
 
-    Website:<br>
+    <h3>Website:</h3>
     <% label_tag :website %>
     <%= text_field_tag :website %><br>
 
-    <%= label_tag :facebook_link %><br>
+    <h3>Facebook Link:</h3>
+    <% label_tag :facebook_link %><br>
     <%= text_field_tag :facebook_link %><br>
 
-    <%= label_tag :instagram_link %><br>
+    <h3>Instagram Link:</h3>
+    <% label_tag :instagram_link %><br>
     <%= text_field_tag :instagram_link %><br>
 
-    What do you make?<br>
+    <h3>What do you make?</h3><br>
 
     <%label_tag :short_description%>
     <%= text_area_tag :short_description %><br>
 
-    How would you categorize it?<br>
+    <h3>How would you categorize it?</h3>
 
     <%=label_tag :jewelry %>
-    <%=radio_button_tag :category, 0 %>
+    <%=radio_button_tag :category, "jewelry" %><br>
     <%=label_tag :fiber_arts %>
-    <%=radio_button_tag :category, 1 %>
+    <%=radio_button_tag :category, "fiber_arts" %><br>
     <%=label_tag :fine_art %>
-    <%=radio_button_tag :category, 2 %>
+    <%=radio_button_tag :category, "fine_art" %><br>
     <%=label_tag :ceramics %>
-    <%=radio_button_tag :category, 3 %>
+    <%=radio_button_tag :category, "ceramics" %><br>
     <%=label_tag :products_for_children %>
-    <%=radio_button_tag :category, 4 %>
+    <%=radio_button_tag :category, "childrens_goods" %><br>
     <%=label_tag :household_products %>
-    <%=radio_button_tag :category, 5 %>
+    <%=radio_button_tag :category, "household_goods" %><br>
     <%=label_tag :skincare %>
-    <%=radio_button_tag :category, 6 %>
+    <%=radio_button_tag :category, "skincare" %><br>
     <%=label_tag :woodworking %>
-    <%=radio_button_tag :category, 7 %>
+    <%=radio_button_tag :category, "woodworking" %><br>
     <%=label_tag :paper_goods %>
-    <%=radio_button_tag :category, 8 %><br>
+    <%=radio_button_tag :category, "paper_goods" %><br>
 
-    Longmont Artisan Market is dedicated to supporting local artists and makers.
-    The Handcrafted Holiday Market only features vendors who create handcrafted goods within Colorado.<br>
-    We specifically do not accept any MLM vendors (Lularoe, doTerra, Pampered Chef, etc.)<br>
+    <h3 style="padding-left: 50px; padding-right: 50px">Longmont Artisan Market is dedicated to supporting local artists and makers.
+      The Handcrafted Holiday Market only features vendors who create handcrafted goods within Colorado.
+      We specifically do not accept any MLM vendors (Lularoe, doTerra, Pampered Chef, etc.)</h3>
 
-    I understand this policy and confirm that, as a vendor, my goods are all handcrafted and made in Colorado.
+      I understand this policy and confirm that, as a vendor, my goods are all handcrafted and made in Colorado.
 
     <% label_tag :mlm_status %>
-    <%= check_box_tag 'accept' %><br>
+    <%= check_box_tag "mlm_status", "I am not an MLM vendor" %><br>
 
-    Tell us a bit more about yourself and what you make!<br>
+    <h3 style="padding-left: 50px; padding-right: 50px">Tell us a bit more about yourself and what you make!
 
-    For example: What is your process?
-    What materials do you use? What makes your work unique?<br>
+      For example: What is your process?
+      What materials do you use? What makes your work unique?</h3>
 
     <% label_tag :description %>
     <%= text_area_tag :description %><br>
 
-    Is this your first time as a vendor at a market event?<br>
+    <h3>Is this your first time as a vendor at a market event?</h3>
     <%=label_tag :yes %>
     <%=radio_button_tag :first_event, true %>
     <%=label_tag :no %>
     <%=radio_button_tag :first_event, false %><br>
 
-    Most people who visit our event are shopping for holiday gifts --
-    what would you consider your most "giftable" product? Why?
+    <h3 style="padding-left: 50px; padding-right: 50px">Most people who visit our event are shopping for holiday gifts --
+      what would you consider your most "giftable" product? Why?</h3>
 
     <% label_tag :best_gift %>
     <%= text_field_tag :best_gift %><br>
 
-    <%= label_tag :price_range_of_products %><br>
+    <h3>Price Range of Your Products:</h3>
+    <% label_tag :price_range_of_products %><br>
     <%= text_field_tag :price_range %><br>
 
-    Booth Choice:<br>
+    <h3>Booth Choice:</h3>
 
-    Six Foot Table
+    <h4>Six Foot Table</h4>
     <% label_tag :six_foot %>
-    <%=radio_button_tag :booth_choice, 0 %>
+    <%=radio_button_tag :booth_choice, "six_ft_table" %>
 
-    10x10 Booth
+    <h4>10x10 Booth</h4>
     <% label_tag :ten_by_ten %>
-    <%=radio_button_tag :booth_choice, 1 %><br>
+    <%=radio_button_tag :booth_choice, "ten_by_ten" %><br>
 
-   Have you been a vendor at a previous Longmont Artisan Market Event?<br>
+    <h3>Have you been a vendor at a previous Longmont Artisan Market Event?</h3>
     <%=label_tag :yes %>
-    <%=radio_button_tag :previous_vendor, true %>
+    <%=radio_button_tag :previous_vendor, "I am a previous vendor" %>
     <%=label_tag :no %>
-    <%=radio_button_tag :previous_vendor, false %><br>
+    <%=radio_button_tag :previous_vendor, "I am not a previous vendor" %><br>
 
-    The success of our events depends on vendors helping with our marketing endeavors.
-    How have you helped Longmont Artisan Market spread the word about events you have been a part of? <br>
+    <h3 style="padding-left: 50px; padding-right: 50px">The success of our events depends on vendors helping with our marketing endeavors.
+      How have you helped Longmont Artisan Market spread the word about events you have been a part of?
 
-    Examples could include posting on Instagram, sharing our event on Facebook, or handing out flyers, among other things.<br>
+    Examples could include posting on Instagram, sharing our event on Facebook, or handing out flyers, among other things.
 
-    If relevant, include links to posts or feel free to email us screenshots at longmontartisanmarket@gmail.com<br>
+      If relevant, include links to posts or feel free to email us screenshots at longmontartisanmarket@gmail.com </h3>
 
     <%label_tag :previous_efforts %>
-    <%= text_area_tag :previous_efforts %>
+    <%= text_area_tag :previous_efforts %><br>
 
+    <h3 style="padding-left: 50px; padding-right: 50px"> Please include links to two of your best product images. To get an image link, navigate to it on your website, Etsy shop, or
+    other online location, then right click on the image and click "Copy Image Address." If you are having trouble with this, please reach out
+      to us at longmontartisanmarket@gmail.com.</h3>
 
+    <%= label_tag :image_one %>
+    <%= text_field_tag :image_one %><br>
 
+    <%= label_tag :image_two %>
+    <%= text_field_tag :image_two %><br>
 
+    <h3>Is there anything else you'd like us to know about you? Please share it below!</h3>
 
+    <% label_tag :additional_info %>
+    <%= text_area_tag :additional_info %><br>
 
-    <%= submit_tag 'Submit Application' %>
+    <h3 style="padding-bottom: 20px">Please note that applications are not complete until you pay your $15 application fee on the next screen!</h3>
+
+    <%= submit_tag 'Submit Application and Pay Fee' %>
   <% end %>
 </div>

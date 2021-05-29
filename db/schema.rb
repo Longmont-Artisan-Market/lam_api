@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_26_030743) do
+ActiveRecord::Schema.define(version: 2021_05_29_203144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(version: 2021_05_26_030743) do
   create_table "applications", force: :cascade do |t|
     t.string "website"
     t.integer "category"
-    t.boolean "mlm_status"
+    t.string "mlm_status"
     t.string "online_orders"
-    t.boolean "previous_vendor"
+    t.string "previous_vendor"
     t.boolean "mask_maker"
     t.string "facebook_link"
     t.string "instagram_link"

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   namespace :applications do
     get "/:event_id/:user_id", to: "applications#new"
+    get "/:application_id", to: "applications#show"
+    post "/:event_id/:user_id", to: "applications#create"
   end
 
   namespace :events do

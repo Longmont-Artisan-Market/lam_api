@@ -19,5 +19,7 @@ Rails.application.routes.draw do
     get "/", to: "profile#show"
   end
 
+  post "/payments/:application_id", to: "payments#create"
+
 
 end

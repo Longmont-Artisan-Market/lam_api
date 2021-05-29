@@ -1,4 +1,5 @@
 <h1 style="text-align: center"><%=@user.name %>, thank you for applying to the <%=@event.name %>! </h1>
 
 <h2 style="text-align: center">To complete your application, please pay your $15 Application Fee via PayPal </h2>
-</div>
+
+<h2 style="text-align: center"><%=link_to "Pay $15 Application Fee", "/payments/#{@application.id}", method: :post %></h2>

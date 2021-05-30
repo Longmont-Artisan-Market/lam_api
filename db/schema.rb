@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_29_203144) do
+ActiveRecord::Schema.define(version: 2021_05_30_143002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_203144) do
     t.bigint "event_id"
     t.string "best_gift"
     t.string "short_description"
+    t.boolean "paid"
     t.index ["event_id"], name: "index_applications_on_event_id"
     t.index ["user_id"], name: "index_applications_on_user_id"
   end

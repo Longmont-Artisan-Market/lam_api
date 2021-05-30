@@ -20,6 +20,7 @@ class Applications::ApplicationsController < Applications::BaseController
     @application = Application.find(params[:application_id])
     @user = @application.user
     @event = @application.event
+    @paypal_client = ENV["PAYPAL_CLIENT_ID"]
 
   end
 

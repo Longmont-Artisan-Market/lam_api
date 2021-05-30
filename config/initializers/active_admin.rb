@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Lam Api"
+  config.site_title = "Longmont Artisan Market"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -48,6 +48,8 @@ ActiveAdmin.setup do |config|
 
   # == User Authentication
   #
+  config.authentication_method = :authenticate_admin_user!
+
   # Active Admin will automatically call an authentication
   # method in a before filter of all controller actions to
   # ensure that there is a currently logged in admin user.
@@ -86,6 +88,7 @@ ActiveAdmin.setup do |config|
 
   # == Current User
   #
+  config.current_user_method = :current_admin_user
   # Active Admin will associate actions with the current
   # user performing them.
   #

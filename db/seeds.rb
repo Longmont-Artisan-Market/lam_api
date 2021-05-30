@@ -17,3 +17,9 @@ application = Application.create(category: 3,
                                  description: "I make coffee mugs",
                                  price_range: "$20-$40",
                                  user: user_1.id)
+
+admin = User.create!(name: "Krista Stadler",
+                    business_name: "Administrator",
+                    email_address: "longmontartisanmarket@gmail.com",
+                    password: "HHM2021",
+                    role: 1)

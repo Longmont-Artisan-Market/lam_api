@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   get "/", to: "homepage#index"
+  get "/login", to: "login#new"
+  post "/login", to: "login#create"
   get "/register", to: "users#new"
   post "/users", to: "users#create"
 

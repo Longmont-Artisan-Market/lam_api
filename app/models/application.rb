@@ -16,6 +16,8 @@ class Application < ApplicationRecord
                   woodworking: 7,
                   paper_goods: 8
                   }
+  enum application_status: { pending: 0, approved: 1, declined: 2 }
+
   enum booth_choice: {six_ft_table: 0, ten_by_ten: 1}
   belongs_to :user
   belongs_to :event

@@ -1,10 +1,19 @@
 <div style="text-align: center;">
-  <h1>Welcome to your profile <%= @user.name %>! </h1>
+  <h1>Welcome, <%= @user.name %>! </h1>
   <h3>Business Name: <%= @user.business_name %><h3>
   <h3>Email Address: <%= @user.email_address %></h3>
+    ---------------------------------------------------------------------
 
-  <h2> View Upcoming Markets and Apply to be a Vendor: </h2>
-    <%  Event.open_for_application.each do |event| %>
-      <h3><%=link_to event.name, "/events/#{event.id}" %> </h3>
-    <% end %>
+  <h2>Submitted Applications</h2>
+  <%@user.applications.each do |application| %>
+      <h3><%= application.event.name %></h3>
+  <% end %>
+
+   <% if @user.applications.count == 0 %>
+    <h2> View Upcoming Markets and Apply to be a Vendor: </h2>
+      <%  Event.open_for_application.each do |event| %>
+        <h3><%=link_to event.name, "/events/#{event.id}" %> </h3>
+      <% end %>
+    <% end%>
+
 </div>

@@ -11,8 +11,13 @@ class LoginController < ApplicationController
         redirect_to "/login"
       elsif user.authenticate(params[:password])
         session[:user_id] = user.id
-        flash[:success] = "You are logged in!"
-        redirect_to "/profile"
+        if user.admin?
+          flash[:success] = "You are logged in!"
+          redirect_to "/admin/applications"
+        else
+          flash[:success] = "You are logged in!"
+          redirect_to "/profile"
+        end
       else
         flash[:error] = "The credentials you entered are incorrect"
         redirect_to "/login"

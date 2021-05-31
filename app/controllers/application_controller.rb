@@ -10,6 +10,13 @@ class ApplicationController < ActionController::Base
   end
 
   def current_admin_user
-    current_user.admin?
+    current_user
   end
+
+  def destroy_admin_user_session_path
+    session.clear
+    flash[:success] = "You are logged out!"
+    redirect_to "/"
+  end
+
 end

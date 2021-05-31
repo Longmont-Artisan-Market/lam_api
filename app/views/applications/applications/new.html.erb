@@ -9,26 +9,27 @@
 
 <div style="text-align: center; padding-bottom: 100px">
   <h2>Application</h2>
+  <h3>Required fields are marked with an asterisk. If a field does not apply to your or your business, please let us know why or write "Not Applicable."</h3>
   <%= form_tag"/applications/#{@event.id}/#{@user.id}", method: :post do |f| %>
 
-    <h3>Website:</h3>
+    <h3>Website:*</h3>
     <% label_tag :website %>
     <%= text_field_tag :website %><br>
 
-    <h3>Facebook Link:</h3>
+    <h3>Facebook Link:*</h3>
     <% label_tag :facebook_link %><br>
     <%= text_field_tag :facebook_link %><br>
 
-    <h3>Instagram Link:</h3>
+    <h3>Instagram Link:*</h3>
     <% label_tag :instagram_link %><br>
     <%= text_field_tag :instagram_link %><br>
 
-    <h3>What do you make?</h3><br>
+    <h3>What do you make?*</h3><br>
 
     <%label_tag :short_description%>
     <%= text_area_tag :short_description %><br>
 
-    <h3>How would you categorize it?</h3>
+    <h3>How would you categorize it?*</h3>
 
     <%=label_tag :jewelry %>
     <%=radio_button_tag :category, "jewelry" %><br>
@@ -53,7 +54,7 @@
       The Handcrafted Holiday Market only features vendors who create handcrafted goods within Colorado.
       We specifically do not accept any MLM vendors (Lularoe, doTerra, Pampered Chef, etc.)</h3>
 
-      I understand this policy and confirm that, as a vendor, my goods are all handcrafted and made in Colorado.
+      I understand this policy and confirm that, as a vendor, my goods are all handcrafted and made in Colorado.*
 
     <% label_tag :mlm_status %>
     <%= check_box_tag "mlm_status", "I am not an MLM vendor" %><br>
@@ -61,28 +62,28 @@
     <h3 style="padding-left: 50px; padding-right: 50px">Tell us a bit more about yourself and what you make!
 
       For example: What is your process?
-      What materials do you use? What makes your work unique?</h3>
+      What materials do you use? What makes your work unique?*</h3>
 
     <% label_tag :description %>
     <%= text_area_tag :description %><br>
 
-    <h3>Is this your first time as a vendor at a market event?</h3>
+    <h3>Is this your first time as a vendor at a market event?*</h3>
     <%=label_tag :yes %>
     <%=radio_button_tag :first_event, true %>
     <%=label_tag :no %>
     <%=radio_button_tag :first_event, false %><br>
 
     <h3 style="padding-left: 50px; padding-right: 50px">Most people who visit our event are shopping for holiday gifts --
-      what would you consider your most "giftable" product? Why?</h3>
+      what would you consider your most "giftable" product? Why?*</h3>
 
     <% label_tag :best_gift %>
     <%= text_field_tag :best_gift %><br>
 
-    <h3>Price Range of Your Products:</h3>
+    <h3>Price Range of Your Products:*</h3>
     <% label_tag :price_range_of_products %><br>
     <%= text_field_tag :price_range %><br>
 
-    <h3>Booth Choice:</h3>
+    <h3>Booth Choice:*</h3>
 
     <h4>Six Foot Table</h4>
     <% label_tag :six_foot %>
@@ -92,7 +93,7 @@
     <% label_tag :ten_by_ten %>
     <%=radio_button_tag :booth_choice, "ten_by_ten" %><br>
 
-    <h3>Have you been a vendor at a previous Longmont Artisan Market Event?</h3>
+    <h3>Have you been a vendor at a previous Longmont Artisan Market Event?*</h3>
     <%=label_tag :yes %>
     <%=radio_button_tag :previous_vendor, "I am a previous vendor" %>
     <%=label_tag :no %>
@@ -103,7 +104,7 @@
 
     Examples could include posting on Instagram, sharing our event on Facebook, or handing out flyers, among other things.
 
-      If relevant, include links to posts or feel free to email us screenshots at longmontartisanmarket@gmail.com </h3>
+      If relevant, include links to posts or feel free to email us screenshots at longmontartisanmarket@gmail.com* </h3>
 
     <%label_tag :previous_efforts %>
     <%= text_area_tag :previous_efforts %><br>

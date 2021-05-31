@@ -4,7 +4,15 @@ class Application < ApplicationRecord
                         :previous_vendor,
                         :previous_efforts,
                         :description,
-                        :price_range
+                        :price_range,
+                        :website,
+                        :facebook_link,
+                        :instagram_link,
+                        :first_event,
+                        :booth_choice,
+                        :best_gift,
+                        :short_description
+
 
   enum category: {jewelry: 0,
                   fiber_arts: 1,

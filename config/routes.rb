@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/", to: "homepage#index"
   get "/login", to: "login#new"
   post "/login", to: "login#create"
+  delete "/login", to: "login#destroy"
   get "/register", to: "users#new"
   post "/users", to: "users#create"
 

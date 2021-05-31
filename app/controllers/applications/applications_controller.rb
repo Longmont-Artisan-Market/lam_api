@@ -11,7 +11,7 @@ class Applications::ApplicationsController < Applications::BaseController
       flash[:notice] = "Application created successfully!"
       redirect_to "/applications/#{application.id}"
     else
-      flash[:notice] = "You must fill out all fields and/or check at least one box in order to submit this application."
+      flash[:notice] = "Oops, looks like you forgot to fill something out. Please try again!"
       redirect_to "/applications/#{params[:event_id]}/#{params[:user_id]}"
     end
   end

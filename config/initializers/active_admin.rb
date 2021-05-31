@@ -47,9 +47,7 @@ ActiveAdmin.setup do |config|
   # namespaces will continue to use the main "site_title" configuration.
 
   # == User Authentication
-  #
   config.authentication_method = :authenticate_admin_user!
-
   # Active Admin will automatically call an authentication
   # method in a before filter of all controller actions to
   # ensure that there is a currently logged in admin user.
@@ -59,6 +57,7 @@ ActiveAdmin.setup do |config|
   # config.authentication_method = :authenticate_admin_user!
 
   # == User Authorization
+
   #
   # Active Admin will automatically call an authorization
   # method in a before filter of all controller actions to
@@ -87,7 +86,7 @@ ActiveAdmin.setup do |config|
   # config.on_unauthorized_access = :access_denied
 
   # == Current User
-  #
+
   config.current_user_method = :current_admin_user
   # Active Admin will associate actions with the current
   # user performing them.
@@ -106,7 +105,7 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
-  config.logout_link_path = :destroy_admin_user_session_path
+  config.logout_link_path = false
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..

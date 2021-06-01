@@ -7,8 +7,8 @@ class LoginController < ApplicationController
       user = User.find_by(email_address: params[:email])
 
       if user == nil
-        flash[:error] = "The credentials you entered are incorrect"
-        redirect_to "/login"
+        flash[:error] = "We couldn't find that account. Try again or register for an account."
+        redirect_to "/"
       elsif user.authenticate(params[:password])
         session[:user_id] = user.id
         if user.admin?
@@ -19,8 +19,8 @@ class LoginController < ApplicationController
           redirect_to "/profile"
         end
       else
-        flash[:error] = "The credentials you entered are incorrect"
-        redirect_to "/login"
+        flash[:error] = "The credentials you entered are incorrect. Try again or register for an account."
+        redirect_to "/"
       end
   end
 
@@ -30,4 +30,3 @@ class LoginController < ApplicationController
     redirect_to "/"
   end
 end
-

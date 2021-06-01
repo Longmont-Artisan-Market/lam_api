@@ -13,13 +13,20 @@
   <nav class = "topnav", style="text-align: right; padding-right: 50px; padding-top: 50px">
     <%= link_to "Home Page", "/" %>
     <%= link_to "Handcrafted Holiday Market", "/events/1" %>
-    <% if @current_user.admin? %>
+
+    <% if current_user == nil %>
+      <%= link_to "Login", "/login" %>
+    <% end %>
+
+    <% if current_user && current_user.admin? %>
       <%= link_to "Logout", "/login", method: :delete %>
       <%= link_to "Profile", "/profile" %>
-      <%= link_to "Admin", "/admin/applications" %>
-    <% else %>
-     <%= link_to "Logout", "/login", method: :delete %>
-     <%= link_to "Profile", "/profile" %>
+      <%= link_to "Applications", "/admin/applications" %>
+    <% end %>
+
+    <% if current_user && current_user.default? %>
+      <%= link_to "Logout", "/login", method: :delete %>
+      <%= link_to "Profile", "/profile" %>
     <% end %>
   </nav>
 

@@ -11,7 +11,8 @@ class Applications::ApplicationsController < Applications::BaseController
       flash[:notice] = "Application created successfully!"
       redirect_to "/applications/#{application.id}"
     else
-      flash[:notice] = "Oops, looks like you forgot to fill something out. Please try again!"
+      flash[:error] = application.errors.full_messages.to_sentence
+    #  flash[:notice] = "Oops, looks like you forgot to fill something out. Please try again!"
       redirect_to "/applications/#{params[:event_id]}/#{params[:user_id]}"
     end
   end

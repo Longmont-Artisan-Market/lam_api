@@ -1,18 +1,17 @@
 class Application < ApplicationRecord
-  # validates_presence_of :category,
-  #                       :mlm_status,
-  #                       :previous_vendor,
-  #                       :previous_efforts,
-  #                       :description,
-  #                       :price_range,
-  #                       :website,
-  #                       :facebook_link,
-  #                       :instagram_link,
-  #                       :first_event,
-  #                       :booth_choice,
-  #                       :best_gift,
-  #                       :short_description
-
+  validates_presence_of :website,
+                        :facebook_link,
+                        :instagram_link,
+                        :short_description,
+                        :category,
+                        :mlm_status,
+                        :description,
+                        :first_event,
+                        :best_gift,
+                        :price_range,
+                        :booth_choice,
+                        :previous_vendor,
+                        :previous_efforts
 
   enum category: {jewelry: 0,
                   fiber_arts: 1,

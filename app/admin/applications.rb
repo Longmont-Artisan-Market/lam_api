@@ -1,5 +1,4 @@
  ActiveAdmin.register Application do
-   actions :index, :show, :edit, :update, :delete
    permit_params :website, :facebook_link, :instagram_link, :short_description, :category, :mlm_status, :description, :first_event,
                  :best_gift, :price_range, :booth_choice, :previous_vendor, :previous_efforts, :image_one, :image_two, :additional_info,
                  :event_id, :user_id

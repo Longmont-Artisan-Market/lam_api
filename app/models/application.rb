@@ -6,7 +6,6 @@ class Application < ApplicationRecord
                         :category,
                         :mlm_status,
                         :description,
-                        :first_event,
                         :best_gift,
                         :price_range,
                         :booth_choice,

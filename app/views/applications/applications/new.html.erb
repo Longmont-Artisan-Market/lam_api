@@ -9,7 +9,7 @@
 
 <div style="text-align: center; padding-bottom: 100px">
   <h2>Application</h2>
-  <h3>Required fields are marked with an asterisk. If a field does not apply to your or your business, please let us know why or write "Not Applicable."</h3>
+  <h3> ALL FIELDS ARE REQUIRED -- IF YOU SUBMIT WITHOUT COMPLETING ALL FIELDS, THE FORM WILL NOT SAVE AND WILL RESET! ></h3>
   <%= form_tag"/applications/#{@event.id}/#{@user.id}", method: :post do |f| %>
 
     <h3>Website:*</h3>
@@ -49,6 +49,8 @@
     <%=radio_button_tag :category, "woodworking" %><br>
     <%=label_tag :paper_goods %>
     <%=radio_button_tag :category, "paper_goods" %><br>
+    <%=label_tag :food %>
+    <%=radio_button_tag :category, "food" %><br>
 
     <h3 style="padding-left: 50px; padding-right: 50px">Longmont Artisan Market is dedicated to supporting local artists and makers.
       The Handcrafted Holiday Market only features vendors who create handcrafted goods within Colorado.

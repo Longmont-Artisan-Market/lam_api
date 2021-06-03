@@ -20,7 +20,8 @@ class Application < ApplicationRecord
                   household_goods: 5,
                   skincare: 6,
                   woodworking: 7,
-                  paper_goods: 8
+                  paper_goods: 8,
+                  food: 9
                   }
   enum application_status: { pending: 0, approved: 1, declined: 2 }
 
